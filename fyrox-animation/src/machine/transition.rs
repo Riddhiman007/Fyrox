@@ -42,10 +42,6 @@ macro_rules! define_two_args_node {
         }
 
         impl<T:EntityId> Reflect for $name<T> {
-            fn source_path() -> &'static str {
-                file!()
-            }
-
             fn type_name(&self) -> &'static str {
                 type_name::<Self>()
             }
@@ -188,10 +184,6 @@ impl<T: EntityId> Visit for NotNode<T> {
 }
 
 impl<T: EntityId> Reflect for NotNode<T> {
-    fn source_path() -> &'static str {
-        file!()
-    }
-
     fn type_name(&self) -> &'static str {
         type_name::<Self>()
     }

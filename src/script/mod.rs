@@ -522,10 +522,6 @@ pub struct Script {
 }
 
 impl Reflect for Script {
-    fn source_path() -> &'static str {
-        file!()
-    }
-
     fn type_name(&self) -> &'static str {
         self.instance.type_name()
     }

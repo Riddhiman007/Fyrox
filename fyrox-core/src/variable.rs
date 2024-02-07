@@ -299,11 +299,6 @@ where
     T: Reflect + Clone + PartialEq + Debug,
 {
     #[inline]
-    fn source_path() -> &'static str {
-        file!()
-    }
-
-    #[inline]
     fn type_name(&self) -> &'static str {
         self.value.type_name()
     }

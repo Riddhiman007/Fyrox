@@ -18,9 +18,6 @@ pub struct ScriptConstructor {
 
     /// Script name.
     pub name: String,
-
-    /// Script source path.
-    pub source_path: String,
 }
 
 /// A special container that is able to create nodes by their type UUID.
@@ -50,7 +47,6 @@ impl ScriptConstructorContainer {
             ScriptConstructor {
                 constructor: Box::new(|| Script::new(T::default())),
                 name: name.to_owned(),
-                source_path: T::source_path().to_owned(),
             },
         );
 

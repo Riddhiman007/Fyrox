@@ -245,10 +245,6 @@ impl Visit for UiNode {
 }
 
 impl Reflect for UiNode {
-    fn source_path() -> &'static str {
-        file!()
-    }
-
     fn type_name(&self) -> &'static str {
         Reflect::type_name(self.0.deref())
     }
